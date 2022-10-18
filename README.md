@@ -1,4 +1,4 @@
-# Mongood
+# Mongood (Nodejs Version)
 
 <img src="./go/assets/logo.png" width="100" height="100" align="right" />
 
