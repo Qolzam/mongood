@@ -127,7 +127,7 @@ func main() {
 	ctx = context.Background()
 
 	// serve root dir
-	mux.Handle("/", gziphandler.GzipHandler(http.FileServer(getFileSystem())))
+	mux.Handle("/", gziphandlemongodb://GzipHandler(http.FileServer(getFileSystem())))
 
 	// handle runCommand
 	mux.Handle("/api/runCommand", gziphandler.GzipHandler(http.HandlerFunc(runCommand)))

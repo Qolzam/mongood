@@ -8,7 +8,6 @@ import LargeMessage from './large-message'
 
 export default function ServerStatus() {
   const { data: serverStatus, error } = useCommandServerStatus()
-
   if (error) {
     return (
       <LargeMessage iconName="Error" title="Error" content={error.message} />

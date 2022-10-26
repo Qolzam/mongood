@@ -182,7 +182,8 @@ export function useCommandFind() {
         ]
       : null,
     () => {
-      const hint = filter.$text || isEmpty(filter) ? undefined : index?.name
+      const hint =
+        (filter as any).$text || isEmpty(filter) ? undefined : index?.name
       return runCommand<{
         cursor: { firstBatch: { [key: string]: MongoData }[] }
       }>(

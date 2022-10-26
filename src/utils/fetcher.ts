@@ -22,9 +22,17 @@ export async function runCommand<T>(
     },
   )
   if (response.ok) {
-    return opts.canonical
-      ? response.json()
-      : (EJSON.parse(await response.text()) as T)
+    if (opts.canonical) {
+      return response.json()
+    } else {
+      const text = await response.text()
+
+      try {
+        return EJSON.parse(text) as T
+      } catch (error) {
+        return JSON.parse(text) as T
+      }
+    }
   }
   throw new Error(await response.text())
 }

@@ -1,4 +1,4 @@
-# Mongood (Nodejs Version)
+# Mongood (including Nodejs Version)
 
 <img src="./go/assets/logo.png" width="100" height="100" align="right" />
 
@@ -69,7 +69,13 @@ yarn
 yarn dev
 ```
 
-### Backend
+### Backend NodeJS
+
+```bash
+yarn server
+```
+
+### Backend GO
 
 ```bash
 cd go
